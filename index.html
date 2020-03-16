@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Crush Test">
+    <title>Crush Có Thích Tôi?</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/heart.png" />
+    <link rel="stylesheet" href="common.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+    <form method="GET" action="https://mitap5zieh.execute-api.ap-southeast-1.amazonaws.com/production/crush/crush-test">
+        <div class="box">
+            <p>* Phần mềm tính toán xác suất dự trên nền tảng BigData và trí tuệ nhân tạo cho độ chính xác cao</p>
+            <div class="heart"></div>
+            <h1>Crush Test</h1>
+            <div class="box-content">
+                <div class="box-left">
+                    <div class="name">
+                        <input type="text" name="yourName" placeholder="Tên của bạn là?" required>
+                    </div>
+                    <div class="gender">
+                        <select class="site-dropdown" name="yourGender">
+                            <option value="not_select">Giới Tính Của Bạn</option>
+                            <option value="nam">Nam</option>
+                            <option value="nu">Nữ</option>
+                        </select>
+                    </div>
+                    <div class="age">
+                        <select class="site-dropdown" id="year-me" name="yearMe">
+                            <option>Năm Sinh Của Bạn</option>
+                        </select>
+                    </div>
+                    <div class="horo-12">
+                        <select class="site-dropdown" id="horo-me" name="horoMe">
+                            <option>Cung Hoàng Đạo Của Bạn</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="box-right">
+                    <div class="name">
+                        <input type="text" name="crushName" placeholder="Tên của người ấy là?" required>
+                    </div>
+                    <div class="gender">
+                        <select class="site-dropdown" name="crushGender">
+                            <option value="not_select">Giới Tính Của Người Ấy</option>
+                            <option value="nam">Nam</option>
+                            <option value="nu">Nữ</option>
+                        </select>
+                    </div>
+                    <div class="age">
+                        <select class="site-dropdown" id="year-crush" name="yearCrush">
+                            <option>Năm Sinh Của Người Ấy</option>
+                        </select>
+                    </div>
+                    <div class="horo-12">
+                        <select class="site-dropdown" id="horo-crush" name="horoCrush">
+                            <option>Cung Hoàng Đạo Của Người Ấy</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="other-question">
+                <div class="relationship">
+                    <select class="site-dropdown" id="horo-crush" name="relationship">
+                        <option value="no">Mối Quan Hệ Hiện Tại</option>
+                        <option value="dong-nghiep">Đồng Nghiệp</option>
+                        <option value="ban-be">Bạn Bè</option>
+                        <option value="ban-cung-truong">Bạn Cùng Trường</option>
+                        <option value="ban-cung-lop">Bạn Cùng Lớp</option>
+                        <option value="khac">Khác</option>
+                    </select>
+                </div>
+                <div class="have-talk">
+                    <p>Đã từng nói chuyện trực tiếp?</p>
+                    <div class="have have-talk-choice">
+                        <div class="yes">
+                            <label class="container">Đã Từng
+                                <input type="radio" value="da-tung-noi-chuyen" name="haveTalk">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="no">
+                            <label class="container">Chưa
+                                <input type="radio" value="chua-tung-noi-chuyen" name="haveTalk">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="have-facebook-friend">
+                    <p>Có phải bạn bè trên Facebook</p>
+                    <div class="have have-facebook-friend-choice">
+                        <div class="yes">
+                            <label class="container">Có
+                                <input type="radio" value="yes" name="haveFB">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="no">
+                            <label class="container">
+                                Không
+                                <input type="radio" value="no" name="haveFB">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="other">
+                            <label class="container">Không Sử Dụng
+                                <input type="radio" value="no" name="haveFB">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="have have-joke">
+                    <p>Người ấy đã từng trêu đùa hoặc khen bạn</p>
+                    <div class="yes">
+                        <label class="container">Đã Từng
+                            <input type="radio" value="da-treu" name="haveJoke">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="no">
+                        <label class="container">
+                            Chưa Bao Giờ
+                            <input type="radio" value="chua-treu" name="haveJoke">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="have say-first">
+                    <p>Ai là người bắt chuyện/nhắn tin trước</p>
+                    <div class="yes">
+                        <label class="container">Tôi
+                            <input type="radio" value="toi" name="talkFirst">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="no">
+                        <label class="container">
+                            Người ấy
+                            <input type="radio" value="crush" name="talkFirst">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="button-cal">
+                    <button id="btn-cal-love">
+                        Tính Toán
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+    <script src="heart.js"></script>
+    <script src="common.js"></script>
+</body>
+
+
+</html>
